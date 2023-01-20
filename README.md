@@ -8,6 +8,8 @@ The House price.py file contains all of the work's source code.
 No missing values were found when I looked at my data, so I used a heat map to plot a correlation of the characteristics to help me decide which ones to use as the inputs for my regression.
 
 Modelling
+
+
 Each time a regression is created, it should be meaningful. Critical thinking is most times needed for regression. Before concluding a feature is significant, always try to understand why. One of the ways to achieve this is by checking the correlation of the input variables to the target. But it is essential also to note correlation does not always mean causation.
 For each model, we slice the input and target variables x and y using the iloc method and split the data into test and train. Splitting mainly aims to ensure the model trains on a set of samples it has never seen before. The split can either be done 60/40,70./30, 80/20, or even 90/10. Ensuring the test sample is smaller than the training sample is essential. These test/train data are used to fit the learning algorithm so that it can learn how to predict.
 We create an instance of the linear regression class and then fit the regression in the correct order(x,y).
@@ -20,11 +22,15 @@ I personally tried working with different feature pairings, however the model 4 
 
 
 Visualization
+
+
 Prediction plot for model 4 test set- This also helps check efficiency of the model.
 We can also figure out how much the predictions and targets differ from one another. Remember that this is the residual. This comparison is incredibly valid because OLS simply reduces the whole sum of squared errors (residuals). Seeing how far we are from the outcome in terms of percentage makes sense as a final step. To simply sort the data set, we take the absolute difference in % in this case.
 
 
 Conclusion
+
+
 Training the model with more features will improve the model. Generally, the more features included, the higher the r2 score, but we can add 100 input variables to a model making the predictions outstanding, but this greatly makes regression futile. It's best to use a few input variables to predict the model, as a good model is always better than a model with high explanatory power. The adjusted R2 should be used to remove meaningless input variables.
 Improving the model
 Outliers are observations that are abnormally distant from other observations in the data. They have a significant impact on regression and inflate coefficients as regression tries to draw the line closer to those values. The model can be enhanced by eliminating outliers. We may accomplish this using a number of quantile or log transformation techniques.
